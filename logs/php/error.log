@@ -1,0 +1,41 @@
+[21-Apr-2024 21:03:08 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[24-Apr-2024 10:48:15 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "register_my_menus" not found or invalid function name in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 D:\Local sites\mota\app\public\wp-settings.php(695): do_action('init')
+#3 D:\Local sites\mota\app\public\wp-config.php(103): require_once('D:\\Local sites\\...')
+#4 D:\Local sites\mota\app\public\wp-load.php(50): require_once('D:\\Local sites\\...')
+#5 D:\Local sites\mota\app\public\wp-admin\admin-ajax.php(22): require_once('D:\\Local sites\\...')
+#6 {main}
+  thrown in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php on line 324
+[24-Apr-2024 10:48:19 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "register_my_menus" not found or invalid function name in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 D:\Local sites\mota\app\public\wp-settings.php(695): do_action('init')
+#3 D:\Local sites\mota\app\public\wp-config.php(103): require_once('D:\\Local sites\\...')
+#4 D:\Local sites\mota\app\public\wp-load.php(50): require_once('D:\\Local sites\\...')
+#5 D:\Local sites\mota\app\public\wp-admin\admin-ajax.php(22): require_once('D:\\Local sites\\...')
+#6 {main}
+  thrown in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php on line 324
+[24-Apr-2024 10:48:53 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "register_my_menus" not found or invalid function name in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 D:\Local sites\mota\app\public\wp-settings.php(695): do_action('init')
+#3 D:\Local sites\mota\app\public\wp-config.php(103): require_once('D:\\Local sites\\...')
+#4 D:\Local sites\mota\app\public\wp-load.php(50): require_once('D:\\Local sites\\...')
+#5 D:\Local sites\mota\app\public\wp-admin\admin-ajax.php(22): require_once('D:\\Local sites\\...')
+#6 {main}
+  thrown in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php on line 324
+[24-Apr-2024 10:48:57 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "register_my_menus" not found or invalid function name in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 D:\Local sites\mota\app\public\wp-settings.php(695): do_action('init')
+#3 D:\Local sites\mota\app\public\wp-config.php(103): require_once('D:\\Local sites\\...')
+#4 D:\Local sites\mota\app\public\wp-load.php(50): require_once('D:\\Local sites\\...')
+#5 D:\Local sites\mota\app\public\wp-admin\admin-ajax.php(22): require_once('D:\\Local sites\\...')
+#6 {main}
+  thrown in D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php on line 324

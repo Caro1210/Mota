@@ -6,26 +6,22 @@
  * @since 1.0.0
  */
 
-get_header();
+ get_header(); ?>
 
-while ( have_posts() ) :
-	the_post();
-
-	?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-
-		<div class="entry-content">
-			<?php the_content(); ?>
-		</div><!-- .entry-content -->
-	</article><!-- #post-<?php the_ID(); ?> -->
-	<?php
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
-endwhile; // End of the loop.
-
-get_footer();
+ <main id="primary" class="site-main single">
+   <?php if (have_posts()) : ?>
+	 <?php while (have_posts()) : the_post(); ?>
+	   <div class="post">
+		 <h1 class="post-title"><?php the_title(); ?></h1>
+		 <p class="post-info">
+		   Publié le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?>.
+		 </p>
+		 <div class="post-content">
+		   <?php the_content(); ?>
+		 </div>
+	   </div>
+	 <?php endwhile; ?>
+   <?php endif; ?>
+ </main><!-- #main -->
+ 
+ <?php get_footer(); ?>
