@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+.logo_site {
+  padding-left: 10%;
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+/*# sourceMappingURL=style.css.map */
