@@ -21,12 +21,14 @@ header ul {
     cursor: pointer;
 }
 
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    background-color: #fff;
-    height: 40px;
-}
+body {
+    font-family: "SpaceMonoRegular", sans-serif;
+    font-weight: normal;
+  }
+
+  a {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
