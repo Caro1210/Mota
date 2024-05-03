@@ -1,11 +1,14 @@
-nav {
+header nav {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
 }
 
 .logo_site {
   position: relative;
   left: 10%;
-  top: 60px;
 }
 
 header ul {
@@ -13,16 +16,12 @@ header ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 50px;
-  padding-right: 10%;
-  background-color: #fff;
-  height: 70px;
-  cursor: pointer;
+  gap: 30px;
+  padding-right: 30%;
 }
 
-body {
-  font-family: "SpaceMonoRegular", sans-serif;
-  font-weight: normal;
+ul li:not(:last-child) {
+  margin-right: 50px;
 }
 
 a {
@@ -30,6 +29,12 @@ a {
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body {
+  font-family: "SpaceMonoRegular", sans-serif;
+  font-weight: normal;
 }
 
 footer ul {
@@ -40,4 +45,5 @@ footer ul {
   gap: 70px;
   background-color: #fff;
   height: 40px;
+  border-top: 2px solid;
 }/*# sourceMappingURL=style.css.map */
