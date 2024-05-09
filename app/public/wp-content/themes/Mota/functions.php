@@ -3,7 +3,8 @@
 //Add styles and scripts
 function theme_enqueue_styles_and_scripts() {
     wp_enqueue_style('mota-style', get_stylesheet_directory_uri(). '/sass/style.css', array(), time());
-    wp_enqueue_script('header', get_theme_file_uri(). '/Js/header.js', array(), true);
+    wp_enqueue_script('header', get_theme_file_uri(). '/js/header.js', array(), true);
+    wp_enqueue_script('modale', get_theme_file_uri() . '/js/modale.js', array(), true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles_and_scripts');
 

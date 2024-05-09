@@ -50,23 +50,23 @@ footer ul {
 
 @font-face {
   font-family: "SpaceMonoBold";
-  src: url("../fonts/SpaceMono/SpaceMono-Bold.ttf");
+  src: url("../fonts/Space_Mono/SpaceMono-Bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "SpaceMonoBoldItalic";
-  src: url("../fonts/SpaceMono/SpaceMono-BoldItalic.ttf");
+  src: url("../fonts/Space_Mono/SpaceMono-BoldItalic.ttf");
   font-weight: italic;
   font-weight: bold;
 }
 @font-face {
   font-family: "SpaceMonoItalic";
-  src: url("../fonts/SpaceMono/SpaceMono-Italic.ttf");
+  src: url("../fonts/Space_Mono/SpaceMono-Italic.ttf");
   font-weight: italic;
 }
 @font-face {
   font-family: "SpaceMonoRegular";
-  src: url("../fonts/SpaceMono/SpaceMono-Regular.ttf");
+  src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
   font-weight: normal;
 }
 @font-face {
@@ -101,4 +101,12 @@ footer ul {
 }
 #contact_modale img {
   width: 100%;
+  margin-top: 10px;
+}
+
+.modale_content {
+  border: 5px solid black;
+  max-width: 50%;
+  position: fixed;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
