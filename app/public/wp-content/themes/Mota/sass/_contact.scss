@@ -1,6 +1,5 @@
 #contact_modale {
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
+    display: flex;
     width: 700px;
     z-index: 100;
     position: fixed;
@@ -9,16 +8,56 @@
     top: 0;
 
     img {
-        width: 100%;
+        width: 195%;
         margin-top: 10px;
+        margin-left: -63%;
+        margin-bottom: 10%;
+        position: relative;
     }
 }
 
 .modale_content {
     border: 5px solid black;
-    max-width: 50%;
+    max-width: 26%;
     position: fixed;
     background-color: white;
+    overflow: hidden;
+    padding-left: 10%;
+    margin-left: 35%;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+   
+ 
 }
 
+.wpcf7-form-control {
+    border: 1px solid #B8BBC2;
+    border-radius: 8px;
+    height: 40px;
+    width: 263px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+        
+}
 
+.wpcf7-textarea {
+    height: 210px;
+}
+
+.wpcf7-submit {
+    border-radius: 0%;
+    height: 50px;
+    width: 268px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.has-spinner {
+    font-family: "Space_Mono";
+    font-size: 12px;
+    font-weight: 400;
+   
+}
