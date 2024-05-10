@@ -2,15 +2,19 @@
 console.log("Modale OK");
 
 jQuery(document).ready(function ($) {
-    // Ouvre la modale au clic sur l'élément de menu
-    $('#menu-item-44').click(function () {
-      $('#contact_modale').show(); // Affiche la modale
-    });
-  
-    // Ferme la modale si l'utilisateur clique sur l'overlay
-    $('.modale_contact').click(function(event) {
-      if (event.target === this) {
-        $(this).hide(); // Cache la modale
-      }
-    });
+  // Open modale
+  $('#menu-item-44').click(function (event) {
+    event.preventDefault(); 
+    $('#contact_modale').css('display', 'flex'); 
+  });
+
+  // close modale if cliqued on send
+  $('.modale_contact').click(function(event) {
+    if (event.target === this) {
+      $(this).css('display', 'none'); 
+    }
+  });
 });
+
+
+

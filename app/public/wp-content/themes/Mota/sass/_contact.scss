@@ -1,11 +1,12 @@
+@keyframes rotateIn {
+    from {transform: rotate(-90deg); opacity: 0;}
+    to {transform: rotate(0); opacity: 1;}
+}
+
 #contact_modale {
     display: flex;
-    width: 700px;
-    z-index: 100;
-    position: fixed;
-    border-radius: 5px;
-    left: 0;
-    top: 0;
+    display: none;
+    animation: rotateIn 0.6s;
   
     img {
         width: 195%;
@@ -25,12 +26,6 @@
     padding-left: 10%;
     margin-left: 35%;
     text-align: left;
-    animation: fade-in 1.2s;
-
-    &.active {
-        visibility: visible;
-        transform: translate(-50%, -50%);
-    }
 }
 
 .wpcf7-form-control {
@@ -39,7 +34,7 @@
     height: 40px;
     width: 263px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    
 }
 
 .wpcf7-textarea {
