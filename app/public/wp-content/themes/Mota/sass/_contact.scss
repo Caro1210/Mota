@@ -6,7 +6,7 @@
     border-radius: 5px;
     left: 0;
     top: 0;
-
+  
     img {
         width: 195%;
         margin-top: 10px;
@@ -24,12 +24,13 @@
     overflow: hidden;
     padding-left: 10%;
     margin-left: 35%;
-    font-family: "Poppins";
-    font-size: 12px;
-    font-weight: 500;
     text-align: left;
-   
- 
+    animation: fade-in 1.2s;
+
+    &.active {
+        visibility: visible;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .wpcf7-form-control {
@@ -39,8 +40,6 @@
     width: 263px;
     margin-bottom: 10px;
     margin-top: 10px;
-    
-        
 }
 
 .wpcf7-textarea {
@@ -56,8 +55,14 @@
 }
 
 .has-spinner {
-    font-family: "Space_Mono";
+    font-family: "SpaceMonoRegular";
     font-size: 12px;
     font-weight: 400;
-   
+    line-height: 20px;
+}
+
+label {
+    font-family: "PoppinsRegular";
+    font-size: 12px;
+    font-weight: 500;
 }

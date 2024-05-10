@@ -292,3 +292,23 @@ Stack trace:
 [03-May-2024 07:43:39 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [03-May-2024 07:44:10 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [03-May-2024 07:44:43 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[09-May-2024 22:05:32 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "jquery" in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:7
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(324): theme_enqueue_styles_and_scripts('')
+#1 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 D:\Local sites\mota\app\public\wp-includes\script-loader.php(2265): do_action('wp_enqueue_scri...')
+#4 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(324): wp_enqueue_scripts('')
+#5 D:\Local sites\mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 D:\Local sites\mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 D:\Local sites\mota\app\public\wp-includes\general-template.php(3050): do_action('wp_head')
+#8 D:\Local sites\mota\app\public\wp-content\themes\Mota\header.php(6): wp_head()
+#9 D:\Local sites\mota\app\public\wp-includes\template.php(810): require_once('D:\\Local sites\\...')
+#10 D:\Local sites\mota\app\public\wp-includes\template.php(745): load_template('D:\\Local sites\\...', true, Array)
+#11 D:\Local sites\mota\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#12 D:\Local sites\mota\app\public\wp-content\themes\Mota\index.php(1): get_header()
+#13 D:\Local sites\mota\app\public\wp-includes\template-loader.php(106): include('D:\\Local sites\\...')
+#14 D:\Local sites\mota\app\public\wp-blog-header.php(19): require_once('D:\\Local sites\\...')
+#15 D:\Local sites\mota\app\public\index.php(17): require('D:\\Local sites\\...')
+#16 {main}
+  thrown in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php on line 7

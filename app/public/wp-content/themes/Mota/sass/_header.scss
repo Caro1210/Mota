@@ -4,6 +4,8 @@ header nav {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  font-family: "SpaceMono-Regular", sans-serif;
+   font-weight: 400;
 }
 
 .logo_site {
@@ -32,8 +34,10 @@ a {
  white-space: nowrap;
 }
 
-body {
-   font-family: "SpaceMonoRegular", sans-serif;
-   font-weight: normal;
-}
 
+
+@media screen {
+  html {
+    margin-top: 0% !important;
+  }
+}
