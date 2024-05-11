@@ -45,7 +45,7 @@
     border-radius: 0%;
     height: 50px;
     width: 268px;
-    border: none;
+    border: 1px;
     margin-bottom: 15px;
 }
 
@@ -65,13 +65,14 @@ label {
 @media screen and (max-width: 900px) { 
     #contact_modale {
       width: 90%; 
-      margin: auto; 
+      margin: center; 
       left: 0;
       right: 0;
     }
   
     .modale_content {
-      max-width: 100%; 
+      max-width: 90%; 
       margin-left: 0; 
+     
     }
   }
