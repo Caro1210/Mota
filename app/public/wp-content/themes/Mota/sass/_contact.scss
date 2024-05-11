@@ -4,9 +4,9 @@
 }
 
 #contact_modale {
-    display: flex;
     display: none;
     animation: rotateIn 0.6s;
+    //width: 700px;
   
     img {
         width: 195%;
@@ -23,7 +23,7 @@
     position: fixed;
     background-color: white;
     overflow: hidden;
-    padding-left: 10%;
+    padding-left: 7%;
     margin-left: 35%;
     text-align: left;
 }
@@ -61,3 +61,17 @@ label {
     font-size: 12px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 900px) { 
+    #contact_modale {
+      width: 90%; 
+      margin: auto; 
+      left: 0;
+      right: 0;
+    }
+  
+    .modale_content {
+      max-width: 100%; 
+      margin-left: 0; 
+    }
+  }

@@ -15,7 +15,13 @@
                 <img src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" alt="logo site Nathalie Mota">
             </a>
             </div>
-        
+
+            <!--add menu burger-->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         <?php
         wp_nav_menu([
             'theme_location' => 'header-main-menu',
@@ -23,4 +29,11 @@
         ?>
        
         </nav>
+        <div class="nav_mobile">
+        <?php
+        wp_nav_menu([
+            'theme_location' => 'header-main-menu',
+        ]);
+        ?>
+        </div>
     </header>
