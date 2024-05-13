@@ -312,3 +312,5 @@ Stack trace:
 #15 D:\Local sites\mota\app\public\index.php(17): require('D:\\Local sites\\...')
 #16 {main}
   thrown in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php on line 7
+[13-May-2024 15:16:03 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[13-May-2024 16:15:15 UTC] Erreur d’événement de replanification de tâche pour le crochet ewww_image_optimizer_relative_migration. Code d’erreur : invalid_schedule. Message d’erreur : L’évènement planifié n’existe pas.. Données : {"schedule":"ewwwio_relative_migration_interval","args":[],"interval":300}
