@@ -8,13 +8,14 @@ jQuery(document).ready(function ($) {
     $('#contact_modale').css('display', 'flex'); 
     $('#overlay').css('display', 'block');
     $('header .nav_mobile').css('display', "none");
+    $('.hamburger').removeClass('open');
   });
 
   // close modale 
   $(document).mousedown(function(event) {
     if (!$(event.target).closest('#contact_modale').length) {
       $('#contact_modale').css('display', 'none');
-      $('#overlay').css('display', 'none'); // Ajoutez cette ligne
+      $('#overlay').css('display', 'none'); 
     }
   });
 });

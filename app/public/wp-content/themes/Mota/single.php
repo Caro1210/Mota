@@ -8,7 +8,8 @@
 
  get_header(); ?>
 
-<?php get_template_part(" '/templates_parts/single_photo' ");?>
+<!-- get_template_part // single_photo -->
+<?php get_template_part("templates_parts/single_photo");?>
 
 <main id="primary" class="site-main single">
    <?php if (have_posts()) : ?>
