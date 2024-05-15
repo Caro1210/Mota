@@ -6,6 +6,9 @@ header nav {
   background-color: #fff;
   font-family: "SpaceMono-Regular", sans-serif;
   font-weight: 400;
+  top: 280px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .logo_site {
@@ -18,7 +21,7 @@ header ul {
  display: flex;
  justify-content: flex-end;
  align-items: center;
- gap: 30px;
+ gap: 20px;
  padding-right: 30%;
 }
 
@@ -42,6 +45,9 @@ a {
 
 .nav_mobile {
   display: none;
+  background-color: #E00000;
+  padding-top: 70%;
+  padding-bottom: 70%;
 }
 
 
@@ -82,6 +88,9 @@ a {
     display: none;
 
   }
+  img {
+    width: 70%;
+  }
   .hamburger {
     display: block;
     
@@ -95,6 +104,12 @@ a {
       padding: 0;
       li {
         margin-right: 0;
+      }
+      a {
+        color: #fff;
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 400;
+        font-size: 44px;
       }
     }
   }

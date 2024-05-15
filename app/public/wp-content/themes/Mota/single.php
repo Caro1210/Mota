@@ -8,7 +8,9 @@
 
  get_header(); ?>
 
- <main id="primary" class="site-main single">
+<?php get_template_part(" '/templates_parts/single_photo' ");?>
+
+<main id="primary" class="site-main single">
    <?php if (have_posts()) : ?>
 	 <?php while (have_posts()) : the_post(); ?>
 	   <div class="post">
@@ -23,5 +25,6 @@
 	 <?php endwhile; ?>
    <?php endif; ?>
  </main><!-- #main -->
+
  
  <?php get_footer(); ?>
