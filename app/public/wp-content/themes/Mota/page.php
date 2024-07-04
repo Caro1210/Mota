@@ -1,22 +1,23 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * @package Mota
- * @since 1.0.0
- */
+<?php get_header(); ?>
 
- get_header(); ?>
-<main id="primary" class="site-main page">
-  <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <div class="post">
-        <h1 class="post-title"><?php the_title(); ?></h1>
-        <div class="post-content">
-          <?php the_content(); ?>
-        </div>
-      </div>
-    <?php endwhile; ?>
-  <?php endif; ?>
-  </main>
+<main id="main" class="site-main" role="main">
+
+
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+            <h1><?php get_the_title(); ?></h1>
+            <section class="container">
+                <?php the_content(); ?>
+
+
+            </section>
+
+    <?php endwhile;
+    endif; ?>
+
+
+
+</main>
+
+
 <?php get_footer(); ?>

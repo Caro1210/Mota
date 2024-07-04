@@ -1,4 +1,4 @@
-<div id="overlay"></div>
+<div id="overlay">
 
 <div id="contact_modale" class="modale_contact">
     <div class="modale_content"> 
@@ -8,4 +8,5 @@
         echo do_shortcode('[contact-form-7 id="adecfda" title="Modale"]');
         ?>
 </div>
-</div>
+    </div>
+    </div>

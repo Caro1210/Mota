@@ -8,24 +8,20 @@
 
  get_header(); ?>
 
-<!-- get_template_part // single_photo -->
-<?php get_template_part("templates_parts/single_photo");?>
+<?php get_template_part( 'single-photos' ); ?>
 
-<main id="primary" class="site-main single">
-   <?php if (have_posts()) : ?>
-	 <?php while (have_posts()) : the_post(); ?>
-	   <div class="post">
-		 <h1 class="post-title"><?php the_title(); ?></h1>
-		 <p class="post-info">
-		   Publié le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?>.
-		 </p>
-		 <div class="post-content">
-		   <?php the_content(); ?>
-		 </div>
-	   </div>
-	 <?php endwhile; ?>
-   <?php endif; ?>
- </main><!-- #main -->
+<div class="single-post">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <h1><?php the_title(); ?></h1>
+        <div class="post-thumbnail">
+            <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail('large');
+            } ?>
+        </div>
+        <div class="post-content">
+            <?php the_content(); ?>
+        </div>
+    <?php endwhile; endif; ?>
+</div>
 
- 
- <?php get_footer(); ?>
+<?php get_footer(); ?>
