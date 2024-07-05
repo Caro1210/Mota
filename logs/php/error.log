@@ -319,3 +319,21 @@ Stack trace:
 [04-Jul-2024 08:36:24 UTC] PHP Warning:  Attempt to read property "title" on null in D:\Local sites\mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [04-Jul-2024 11:44:52 UTC] PHP Warning:  Trying to access array offset on value of type null in D:\Local sites\mota\app\public\wp-content\themes\Mota\front-page.php on line 15
 [04-Jul-2024 11:46:55 UTC] PHP Warning:  Trying to access array offset on value of type null in D:\Local sites\mota\app\public\wp-content\themes\Mota\front-page.php on line 15
+[04-Jul-2024 14:26:07 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 14
+[04-Jul-2024 22:12:09 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 34
+[04-Jul-2024 22:12:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function afficherImages() in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php:86
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-includes\template.php(812): require()
+#1 D:\Local sites\mota\app\public\wp-includes\template.php(745): load_template('D:\\Local sites\\...', false, Array)
+#2 D:\Local sites\mota\app\public\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#3 D:\Local sites\mota\app\public\wp-content\themes\Mota\front-page.php(6): get_template_part('templates_parts...')
+#4 D:\Local sites\mota\app\public\wp-includes\template-loader.php(106): include('D:\\Local sites\\...')
+#5 D:\Local sites\mota\app\public\wp-blog-header.php(19): require_once('D:\\Local sites\\...')
+#6 D:\Local sites\mota\app\public\index.php(17): require('D:\\Local sites\\...')
+#7 {main}
+  thrown in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 86
+[05-Jul-2024 09:01:27 UTC] PHP Fatal error:  Cannot redeclare afficherTaxonomies() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:32) in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 35
+[05-Jul-2024 09:08:55 UTC] PHP Fatal error:  Cannot redeclare afficherTaxonomies() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:32) in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 20
+[05-Jul-2024 09:10:22 UTC] PHP Fatal error:  Cannot redeclare afficherTaxonomies() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:32) in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 20
+[05-Jul-2024 09:10:59 UTC] PHP Fatal error:  Cannot redeclare afficherTaxonomies() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:32) in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 30
+[05-Jul-2024 09:11:09 UTC] PHP Fatal error:  Cannot redeclare afficherTaxonomies() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:32) in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 30
