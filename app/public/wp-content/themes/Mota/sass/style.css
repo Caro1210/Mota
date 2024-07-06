@@ -371,6 +371,7 @@ label {
   flex-direction: column;
   align-items: center;
   width: 260px;
+  position: relative;
 }
 
 .filtre select {
@@ -400,13 +401,57 @@ label {
   .filtres {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 80%;
+    margin: 0;
   }
   .filtre {
     width: 80%;
     margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
   }
   .filtre-trier-par {
     margin-left: 0;
+  }
+  .conteneur_filtres {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    margin: 10px 0 50px 50px;
+  }
+}
+@media (max-width: 1085px) and (min-width: 769px) {
+  .filtres {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 20px 0 20px;
+  }
+  .filtre {
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  .filtre-trier-par {
+    margin-left: 0;
+  }
+  .conteneur_filtres {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 50px 0;
   }
 }
 .custom-select-wrapper {
@@ -423,6 +468,7 @@ label {
   width: 100%;
   text-align: left;
   position: relative;
+  z-index: 1;
 }
 
 .custom-select-display::after {
@@ -445,6 +491,7 @@ label {
   border: 1px solid #B8BBC2;
   border-radius: 8px;
   max-height: 200px;
+  z-index: 10; /* Ajouter z-index ici */
 }
 
 .custom-select-option {
