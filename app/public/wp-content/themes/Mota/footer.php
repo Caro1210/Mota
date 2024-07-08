@@ -1,5 +1,6 @@
 <?php 
     get_template_part("templates_parts/contact");
+    get_template_part("templates_parts/lightbox");
 ?>
 
 <footer>

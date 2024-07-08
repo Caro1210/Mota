@@ -12,6 +12,8 @@ function theme_enqueue_styles_and_scripts() {
     wp_enqueue_script('modale', get_theme_file_uri(). '/js/modale.js', array('jquery'), true);
     wp_enqueue_script('filters', get_theme_file_uri() . '/js/filters.js', array('jquery'), true);
     wp_enqueue_script('load-more', get_theme_file_uri() . '/js/load-more.js', array('jquery'), true);
+    wp_enqueue_script('lightbox', get_theme_file_uri() . '/js/lightbox.js', array('jquery'), true);
+    
 
     // Ajouter wp_localize_script pour passer l'URL d'admin AJAX à JavaScript
     wp_localize_script('filters', 'load_more_params', array(
@@ -44,16 +46,14 @@ function afficherTaxonomies($nomTaxonomie) {
     }
 }
 
-// Fonction pour afficher les images
+//show img
 function afficherImages($query, $reset_postdata = true) {
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
             
-            // Récupérer l'URL de la photo depuis le champ ACF
-            $photoUrl = get_field('photo');
-
-            // Récupérer les autres informations nécessaires
+            // URL photo
+            $photoUrl = get_post_meta(get_the_ID(), 'photo', true);
             $photo_titre = get_the_title();
             $post_url = get_permalink();
             $reference = get_field('reference');
@@ -63,10 +63,14 @@ function afficherImages($query, $reset_postdata = true) {
             if ($categorie && !is_wp_error($categorie) && !empty($categorie)) {
                 $categorie_name = $categorie[0]->name;
             }
+
+            // Débogage : Vérifiez la valeur du champ photo
+            echo '<script>console.log("Photo URL: ' . esc_js($photoUrl) . '")</script>';
+            echo '<script>console.log("Categorie: ' . esc_js($categorie_name) . '")</script>';
+            echo '<script>console.log("Reference: ' . esc_js($reference) . '")</script>';
             ?>
 
             <div class="blockPhotoRelative">
-                <!-- Afficher l'image avec son URL et un texte alternatif -->
                 <?php if ($photoUrl) : ?>
                     <img src="<?php echo esc_url($photoUrl); ?>" alt="<?php the_title_attribute(); ?>">
                 <?php else : ?>
@@ -74,27 +78,24 @@ function afficherImages($query, $reset_postdata = true) {
                 <?php endif; ?>
 
                 <div class="overlay">
-                    <!-- Afficher le titre de la photo -->
-                    <h2><?php echo esc_html($photo_titre); ?></h2>
+                    <?php if ($reference) : ?>
+                        <h2><?php echo esc_html($reference); ?></h2>
+                    <?php endif; ?>
 
-                    <!-- Afficher le nom de la catégorie s'il est disponible -->
                     <?php if ($categorie_name) : ?>
                         <h3><?php echo esc_html($categorie_name); ?></h3>
                     <?php endif; ?>
 
-                    <!-- Icône pour voir la photo en détail -->
                     <div class="eye-icon">
                         <a href="<?php echo esc_url($post_url); ?>">
                             <img src="<?php echo get_template_directory_uri() . '/images/eye.png'; ?>" alt="voir la photo">
                         </a>
                     </div>
 
-                    <!-- Vérifier si la référence est définie avant d'afficher l'icône fullscreen -->
-                    <?php if ($reference) : ?>
-                        <div class="fullscreen-icon" data-full="<?php echo esc_attr($photoUrl); ?>" data-category="<?php echo esc_attr($categorie_name); ?>" data-reference="<?php echo esc_attr($reference); ?>">
-                            <img src="<?php echo get_template_directory_uri() . '/images/icon_fullscreen.png'; ?>" alt="Plein écran">
-                        </div>
-                    <?php endif; ?>
+                    <div class="fullscreen-icon" data-full="<?php echo esc_attr($photoUrl); ?>" data-category="<?php echo esc_attr($categorie_name); ?>" data-reference="<?php echo esc_attr($reference); ?>">
+                        <?php echo '<script>console.log("Data URL: ' . esc_attr($photoUrl) . '")</script>'; ?>
+                        <img src="<?php echo get_template_directory_uri() . '/images/icon_fullscreen.png'; ?>" alt="Plein écran">
+                    </div>
                 </div>
             </div>
 

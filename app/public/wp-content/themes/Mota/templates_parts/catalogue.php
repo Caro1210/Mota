@@ -19,4 +19,6 @@ get_header(); ?>
     <button id="btnLoad-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">Charger plus</button>
 </div>
 
+
+
 <?php get_footer(); ?>

@@ -8,7 +8,7 @@
 
  get_header(); ?>
 
-<?php get_template_part( 'single-photos' ); ?>
+<?php get_template_part( '/templates_parts/single-photos' ); ?>
 
 <div class="single-post">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
