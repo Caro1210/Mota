@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 $taxonomy = [
     "categories" => "CATÉGORIES",
     "formats" => "FORMATS",
@@ -12,11 +11,12 @@ echo "<div class='filtres'>";
 function afficherSelectTaxonomie($id, $name, $label, $afficherTaxonomiesCallback = null) {
     echo "<div class='filtre'>";
     echo "<section id='$id' class='js-filter-form filtre colonne'>";
+    echo "<label for='select-$id'>$label</label>";
     echo "<select id='select-$id' name='$name' class='custom-select'>";
     echo "<option value='all' hidden></option>";
     echo "<option value='all' selected>$label</option>";
     if ($afficherTaxonomiesCallback) {
-        $afficherTaxonomiesCallback($name);
+        call_user_func($afficherTaxonomiesCallback, $name);
     }
     echo "</select>";
     echo "</section>";
@@ -30,8 +30,9 @@ afficherSelectTaxonomie('formats', 'format', $taxonomy['formats'], 'afficherTaxo
 // Filtre par date
 echo "<div class='filtre filtre-trier-par'>";
 echo "<section id='annees' class='js-filter-form filtre colonne'>";
+echo "<label for='select-annee'>{$taxonomy['annees']}</label>";
 echo "<select id='select-annee' name='annee' class='custom-select'>";
-echo "<option value='all'>{$taxonomy['annees']}</option>";
+echo "<option value='all' selected>{$taxonomy['annees']}</option>";
 echo "<option value='date_asc'>plus récent</option>";
 echo "<option value='date_desc'>plus ancien</option>";
 echo "</select>";

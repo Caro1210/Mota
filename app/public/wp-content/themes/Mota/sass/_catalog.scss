@@ -1,0 +1,140 @@
+#photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajustez cet espace selon vos besoins */
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Ajustez cette valeur en fonction de votre mise en page */
+}
+
+.blockPhotoRelative {
+    position: relative;
+    width: 564px; /* Taille fixe par défaut */
+    height: 495px; /* Taille fixe par défaut */
+    box-sizing: border-box;
+    margin-bottom: 50px;
+
+    /* Ajustements responsives */
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+        width: 370px;
+        height: auto;
+    }
+
+    @media screen and (max-width: 765px) {
+        width: 318px;
+        height: 279px;
+        margin: 1% auto;
+    }
+}
+
+.blockPhotoRelative img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: opacity 0.3s, background-color 0.3s;
+    opacity: 0; /* Start with 0 opacity */
+}
+
+.blockPhotoRelative:hover .overlay {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay h2, .overlay h3 {
+    display: none;
+    color: white;
+    font-family: PoppinsRegular;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.overlay h2 {
+    left: 10px;
+    top: 454px;
+    font-size: 14px;
+
+    @media screen and (max-width: 765px) {
+        top: 227px;
+        font-size: 12px;
+    }
+}
+
+.overlay h3 {
+    left: 488px;
+    top: 452px;
+    font-size: 14px;
+
+    @media screen and (max-width: 765px) {
+        left: 240px;
+        top: 237px;
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+        left: 289px;
+    }
+}
+
+.blockPhotoRelative:hover .overlay h2, .blockPhotoRelative:hover .overlay h3 {
+    display: block;
+}
+
+.eye-icon, .fullscreen-icon {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+.blockPhotoRelative:hover .eye-icon, .blockPhotoRelative:hover .fullscreen-icon {
+    display: block;
+}
+
+.eye-icon {
+    width: 48px;
+    height: 33.2px;
+    top: 231.4px;
+    left: 255px;
+
+    @media screen and (max-width: 765px) {
+        top: 135px;
+        left: 140px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+        left: 175px;
+    }
+}
+
+.fullscreen-icon {
+    width: 34px;
+    height: 34px;
+    top: 11px;
+    left: 512px;
+
+    @media screen and (max-width: 765px) {
+        top: 17px;
+        left: 267px;
+    }
+
+    @media screen and (min-width: 765px) and (max-width: 1140px) {
+        left: 317px;
+    }
+}
+
+@media (max-width: 768px) {
+    #photo-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
