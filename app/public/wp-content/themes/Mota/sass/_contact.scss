@@ -46,9 +46,9 @@
 .wpcf7-form-control {
     border: 1px solid #B8BBC2;
     border-radius: 8px;
-    height: 40px;
-    width: 263px;
-    margin-bottom: 15px;
+    height: 37px;
+    width: 271px;
+    margin-bottom: -9px;
     
 }
 
@@ -69,6 +69,13 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #B0B0B0; 
+        color: #fff; 
+    }
+
 }
 
 label {

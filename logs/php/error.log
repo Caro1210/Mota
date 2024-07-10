@@ -381,3 +381,24 @@ Stack trace:
 [08-Jul-2024 12:24:27 UTC] PHP Warning:  include(): Failed opening 'Mota/templates_parts/filtres.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\catalogue.php on line 5
 [08-Jul-2024 12:25:12 UTC] PHP Warning:  include(../templates_parts/filtres.php): Failed to open stream: No such file or directory in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\catalogue.php on line 5
 [08-Jul-2024 12:25:12 UTC] PHP Warning:  include(): Failed opening '../templates_parts/filtres.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\catalogue.php on line 5
+[09-Jul-2024 06:30:05 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 64
+[09-Jul-2024 06:30:30 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 64
+[09-Jul-2024 06:30:30 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 74
+[09-Jul-2024 06:31:00 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 30
+[09-Jul-2024 06:31:00 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 64
+[09-Jul-2024 06:31:00 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 74
+[09-Jul-2024 10:01:24 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:04:08 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:06:01 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:06:02 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:06:03 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:06:05 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 10:06:08 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 11:11:29 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 11:13:10 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 11:16:21 UTC] PHP Warning:  Undefined variable $ref_photo in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 73
+[09-Jul-2024 14:20:56 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 100
+[09-Jul-2024 14:20:56 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 115
+[09-Jul-2024 16:04:58 UTC] PHP Parse error:  syntax error, unexpected identifier "id" in D:\Local sites\mota\app\public\wp-content\themes\Mota\single.php on line 124
+[10-Jul-2024 14:23:31 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 111
+[10-Jul-2024 14:23:31 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 126

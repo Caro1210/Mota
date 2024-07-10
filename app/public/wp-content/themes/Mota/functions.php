@@ -12,6 +12,7 @@ function theme_enqueue_styles_and_scripts() {
     wp_enqueue_script('modale', get_theme_file_uri(). '/js/modale.js', array('jquery'), true);
     wp_enqueue_script('filters', get_theme_file_uri() . '/js/filters.js', array('jquery'), true);
     wp_enqueue_script('load-more', get_theme_file_uri() . '/js/load-more.js', array('jquery'), true);
+    wp_enqueue_script('modale2', get_theme_file_uri() . '/js/modale2.js', array('jquery'), true);
     wp_enqueue_script('lightbox', get_theme_file_uri() . '/js/lightbox.js', array('jquery'), true);
     
 
@@ -63,11 +64,6 @@ function afficherImages($query, $reset_postdata = true) {
             if ($categorie && !is_wp_error($categorie) && !empty($categorie)) {
                 $categorie_name = $categorie[0]->name;
             }
-
-            // Débogage : Vérifiez la valeur du champ photo
-            echo '<script>console.log("Photo URL: ' . esc_js($photoUrl) . '")</script>';
-            echo '<script>console.log("Categorie: ' . esc_js($categorie_name) . '")</script>';
-            echo '<script>console.log("Reference: ' . esc_js($reference) . '")</script>';
             ?>
 
             <div class="blockPhotoRelative">
