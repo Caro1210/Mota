@@ -782,19 +782,16 @@ p {
   gap: 11%;
   margin-top: 1px;
 }
-
-.contact_inside p {
+.contact_inside:p {
   text-align: center;
 }
 
 .like_too {
   text-align: center;
 }
-
-.like_too p {
+.like_too:p {
   display: inline-block;
 }
-
 .like_too_container {
   display: flex;
   flex-direction: column;
@@ -914,9 +911,23 @@ p {
     text-align: left;
     z-index: 11;
   }
+  .photo-info {
+    margin-top: 0px;
+  }
+  h2 {
+    font-family: "SpaceMono400Italic", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  .vue_photo {
+    width: 98%;
+    height: 98%;
+    margin-left: 1%;
+  }
 }
 body {
   margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
