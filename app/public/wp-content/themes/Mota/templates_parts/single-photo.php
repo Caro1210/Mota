@@ -1,7 +1,6 @@
 <?php
-get_header(); ?>
+get_header();
 
-<?php
 if (have_posts()) {
     while (have_posts()) {
         the_post();
@@ -15,8 +14,10 @@ if (have_posts()) {
 
         $categorie = get_the_terms(get_the_ID(), 'categorie');
         $categorie_slug = '';
+        $categorie_name = '';
         if ($categorie && !is_wp_error($categorie)) {
             $categorie_slug = $categorie[0]->slug;
+            $categorie_name = $categorie[0]->name;
         }
 
         $format = get_the_term_list(get_the_ID(), 'format');
@@ -29,8 +30,8 @@ if (have_posts()) {
         echo '<p>Type de photo : ' . $type . '</p>';
         echo '<p>Référence : ' . $reference . '</p>';
 
-        if (!empty($annee_photo)) {
-            echo '<p>Année(s) : ' . $annee_photo . '</p>';
+        if (!empty($annee)) {
+            echo '<p>Année(s) : ' . $annee . '</p>';
         }
 
         if (!empty($categorie)) {
@@ -50,6 +51,7 @@ if (have_posts()) {
             echo '<a href="' . get_the_post_thumbnail_url(get_the_ID(), 'full') . '" data-lightbox="image-1" data-title="' . get_the_title() . '">' . $image . '</a>';
         }
         echo '</div>';
+        echo '</div>'; // End of photo-box
     }
 }
 ?>
@@ -96,38 +98,38 @@ if ($current_category && !is_wp_error($current_category)) {
 }
 ?>
 
-  <div class="small_img"> 
-<?php
-$prev_post_query = new WP_Query(array(
-    'post_type' => 'photo',
-    'posts_per_page' => 1,
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'post__not_in' => array(get_the_ID()),
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'categorie',
-            'field'    => 'slug',
-            'terms'    => $current_category_slug,
+<div class="small_img">
+    <?php
+    $prev_post_query = new WP_Query(array(
+        'post_type' => 'photo',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post__not_in' => array(get_the_ID()),
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'categorie',
+                'field'    => 'slug',
+                'terms'    => $current_category_slug,
+            ),
         ),
-    ),
-));
+    ));
 
-$next_post_query = new WP_Query(array(
-    'post_type' => 'photo',
-    'posts_per_page' => 1,
-    'orderby' => 'date',
-    'order' => 'ASC',
-    'post__not_in' => array(get_the_ID()),
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'categorie',
-            'field'    => 'slug',
-            'terms'    => $current_category_slug,
+    $next_post_query = new WP_Query(array(
+        'post_type' => 'photo',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'post__not_in' => array(get_the_ID()),
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'categorie',
+                'field'    => 'slug',
+                'terms'    => $current_category_slug,
+            ),
         ),
-    ),
-));
-?> 
+    ));
+    ?>
 </div>
 
 <?php
@@ -166,16 +168,39 @@ echo '</div>';
 ?>
 
 <div class="galerie_photo">
-<div id="photo-container">
-    <?php
-    $args = array(
-        'post_type'      => 'photo', 
-        'posts_per_page' => 2,
-        'order'          => 'ASC',
-    );
-    $photo_block = new WP_Query($args);
-    afficherImages($photo_block);
-    ?>
-</div>
+    <div id="photo-container">
+        <?php
+        // Arguments pour la requête WP_Query
+        $args = array(
+            'post_type'      => 'photo',
+            'posts_per_page' => 2,
+            'order'          => 'ASC',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'categorie',
+                    'field'    => 'slug',
+                    'terms'    => $current_category_slug,
+                ),
+            ),
+        );
+
+        // Exécutez la requête (no repetition function ^^)
+        $photo_block = new WP_Query($args);
+
+        if ($photo_block->have_posts()) {
+            while ($photo_block->have_posts()) {
+                $photo_block->the_post();
+                afficher_image_galerie(get_the_ID());
+            }
+            // Restaurez les données du post original
+            wp_reset_postdata();
+        } else {
+            echo '<p>Aucune photo trouvée dans cette catégorie.</p>';
+        }
+        ?>
+    </div>
 </div>
 
+<?php
+get_footer();
+?>

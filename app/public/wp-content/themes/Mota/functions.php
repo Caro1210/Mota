@@ -64,6 +64,7 @@ function afficherImages($query, $reset_postdata = true) {
             if ($categorie && !is_wp_error($categorie) && !empty($categorie)) {
                 $categorie_name = $categorie[0]->name;
             }
+            
             ?>
 
             <div class="blockPhoto">
@@ -105,6 +106,51 @@ function afficherImages($query, $reset_postdata = true) {
         }
     } else {
         echo 'Aucune photo trouvée.';
+    }
+}
+
+// Afficher une image de la galerie
+if (!function_exists('afficher_image_galerie')) {
+    function afficher_image_galerie($post_id) {
+        $photoUrl = get_the_post_thumbnail_url($post_id);
+        $post_url = get_permalink($post_id);
+        $reference = get_field('reference', $post_id);
+        $categorie = get_the_terms($post_id, 'categorie');
+        $categorie_name = '';
+        if ($categorie && !is_wp_error($categorie)) {
+            $categorie_name = $categorie[0]->name;
+        }
+        ?>
+        <div class="blockPhoto">
+            <?php if ($photoUrl) : ?>
+                <img src="<?php echo esc_url($photoUrl); ?>" alt="<?php the_title_attribute(); ?>">
+            <?php else : ?>
+                <img src="<?php echo esc_url(get_the_post_thumbnail_url($post_id)); ?>" alt="<?php the_title_attribute(); ?>">
+            <?php endif; ?>
+
+            <div class="overlay">
+                <?php if ($reference) : ?>
+                    <h2><?php echo esc_html($reference); ?></h2>
+                <?php endif; ?>
+
+                <?php if ($categorie_name) : ?>
+                    <h3><?php echo esc_html($categorie_name); ?></h3>
+                <?php endif; ?>
+
+                <div class="eye-icon">
+                    <a href="<?php echo esc_url($post_url); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/images/eye.png'; ?>" alt="voir la photo">
+                    </a>
+                </div>
+
+                <?php if ($reference) : ?>
+                    <div class="fullscreen-icon" data-full="<?php echo esc_url(get_the_post_thumbnail_url($post_id)); ?>" data-category="<?php echo esc_attr($categorie_name); ?>" data-reference="<?php echo esc_attr($reference); ?>">
+                        <img class="fullscreen" src="<?php echo get_template_directory_uri() . '/images/icon_fullscreen.png'; ?>" alt="Plein écran">
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+        <?php
     }
 }
 
