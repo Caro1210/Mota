@@ -1,4 +1,6 @@
-jQuery(document).ready(function($) {
+//désactiver car doublon avec lightbox.JS et même fonction
+
+/*jQuery(document).ready(function($) {
     $('#btnLoad-more').on('click', function() {
         var button = $(this);
         var page = button.data('page');
@@ -28,4 +30,4 @@ jQuery(document).ready(function($) {
             }
         });
     });
-});
+});*/

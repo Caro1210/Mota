@@ -402,3 +402,57 @@ Stack trace:
 [09-Jul-2024 16:04:58 UTC] PHP Parse error:  syntax error, unexpected identifier "id" in D:\Local sites\mota\app\public\wp-content\themes\Mota\single.php on line 124
 [10-Jul-2024 14:23:31 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 111
 [10-Jul-2024 14:23:31 UTC] PHP Warning:  Undefined variable $current_category_slug in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\single-photo.php on line 126
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $photoUrl in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 2
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 9
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $categorie_name in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 13
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $post_url in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 18
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $photoUrl in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 23
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $categorie_name in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 23
+[11-Jul-2024 07:37:28 UTC] PHP Warning:  Undefined variable $reference in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\lightbox.php on line 23
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:03 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:06 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:06 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:09 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:12:17 UTC] PHP Warning:  Array to string conversion in D:\Local sites\mota\app\public\wp-includes\formatting.php on line 1108
+[11-Jul-2024 12:44:32 UTC] PHP Fatal error:  Cannot redeclare afficherImages() (previously declared in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php:40) in D:\Local sites\mota\app\public\wp-content\themes\Mota\functions.php on line 113
+[11-Jul-2024 12:46:44 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "afficherTaxonomies" not found or invalid function name in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php:19
+Stack trace:
+#0 D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php(27): afficherSelectTaxonomie('categories', 'categorie', 'CAT\xC3\x89GORIES', 'afficherTaxonom...')
+#1 D:\Local sites\mota\app\public\wp-includes\template.php(812): require('D:\\Local sites\\...')
+#2 D:\Local sites\mota\app\public\wp-includes\template.php(745): load_template('D:\\Local sites\\...', false, Array)
+#3 D:\Local sites\mota\app\public\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#4 D:\Local sites\mota\app\public\wp-content\themes\Mota\front-page.php(6): get_template_part('templates_parts...')
+#5 D:\Local sites\mota\app\public\wp-includes\template-loader.php(106): include('D:\\Local sites\\...')
+#6 D:\Local sites\mota\app\public\wp-blog-header.php(19): require_once('D:\\Local sites\\...')
+#7 D:\Local sites\mota\app\public\index.php(17): require('D:\\Local sites\\...')
+#8 {main}
+  thrown in D:\Local sites\mota\app\public\wp-content\themes\Mota\templates_parts\filtres.php on line 19

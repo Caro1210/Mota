@@ -62,6 +62,11 @@ jQuery(document).ready(function($) {
                 console.log('Response received:', response);
                 if (response.success) {
                     $('#photo-container').html(response.data);
+
+                    // Réassigner les événements de lightbox après la mise à jour des images
+                    if (window.attachLightboxEvents) {
+                        window.attachLightboxEvents();
+                    }
                 } else {
                     $('#photo-container').html('<p>Aucune photo trouvée.</p>');
                 }
@@ -73,6 +78,9 @@ jQuery(document).ready(function($) {
             }
         });
     });
+
+    // Reassign lightbox events when the page loads
+    if (window.attachLightboxEvents) {
+        window.attachLightboxEvents();
+    }
 });
-
-

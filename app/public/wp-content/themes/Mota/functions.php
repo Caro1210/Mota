@@ -11,7 +11,7 @@ function theme_enqueue_styles_and_scripts() {
     wp_enqueue_script('header', get_theme_file_uri(). '/js/header.js', array('jquery'), true);
     wp_enqueue_script('modale', get_theme_file_uri(). '/js/modale.js', array('jquery'), true);
     wp_enqueue_script('filters', get_theme_file_uri() . '/js/filters.js', array('jquery'), true);
-    wp_enqueue_script('load-more', get_theme_file_uri() . '/js/load-more.js', array('jquery'), true);
+    //wp_enqueue_script('load-more', get_theme_file_uri() . '/js/load-more.js', array('jquery'), true);
     wp_enqueue_script('modale2', get_theme_file_uri() . '/js/modale2.js', array('jquery'), true);
     wp_enqueue_script('lightbox', get_theme_file_uri() . '/js/lightbox.js', array('jquery'), true);
     
@@ -66,7 +66,7 @@ function afficherImages($query, $reset_postdata = true) {
             }
             ?>
 
-            <div class="blockPhotoRelative">
+            <div class="blockPhoto">
                 <?php if ($photoUrl) : ?>
                     <img src="<?php echo esc_url($photoUrl); ?>" alt="<?php the_title_attribute(); ?>">
                 <?php else : ?>
@@ -88,10 +88,12 @@ function afficherImages($query, $reset_postdata = true) {
                         </a>
                     </div>
 
-                    <div class="fullscreen-icon" data-full="<?php echo esc_attr($photoUrl); ?>" data-category="<?php echo esc_attr($categorie_name); ?>" data-reference="<?php echo esc_attr($reference); ?>">
+                    <?php if ($reference) : ?>
+                    <div class="fullscreen-icon" data-full="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" data-category="<?php echo esc_attr($categorie_name); ?>" data-reference="<?php echo esc_attr($reference); ?>">
                         <?php echo '<script>console.log("Data URL: ' . esc_attr($photoUrl) . '")</script>'; ?>
-                        <img src="<?php echo get_template_directory_uri() . '/images/icon_fullscreen.png'; ?>" alt="Plein écran">
+                        <img class="fullscreen" src="<?php echo get_template_directory_uri() . '/images/icon_fullscreen.png'; ?>" alt="Plein écran">
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
 

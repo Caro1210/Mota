@@ -7,7 +7,7 @@
     max-width: 1200px; 
 }
 
-.blockPhotoRelative {
+.blockPhoto {
     position: relative;
     width: 564px; 
     height: 495px; 
@@ -27,7 +27,7 @@
     }
 }
 
-.blockPhotoRelative img {
+.blockPhoto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -46,7 +46,7 @@
     opacity: 0; 
 }
 
-.blockPhotoRelative:hover .overlay {
+.blockPhoto:hover .overlay {
     opacity: 0.8;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -86,7 +86,7 @@
     }
 }
 
-.blockPhotoRelative:hover .overlay h2, .blockPhotoRelative:hover .overlay h3 {
+.blockPhoto:hover .overlay h2, .blockPhoto:hover .overlay h3 {
     display: block;
 }
 
@@ -96,7 +96,7 @@
     cursor: pointer;
 }
 
-.blockPhotoRelative:hover .eye-icon, .blockPhotoRelative:hover .fullscreen-icon {
+.blockPhoto:hover .eye-icon, .blockPhoto:hover .fullscreen-icon {
     display: block;
 }
 
