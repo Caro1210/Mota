@@ -27,12 +27,7 @@ if (have_posts()) {
         echo '<div class="photo-info">';
         echo '<h2>' . get_the_title() . '</h2>';
 
-        echo '<p>Type de photo : ' . $type . '</p>';
         echo '<p>Référence : ' . $reference . '</p>';
-
-        if (!empty($annee)) {
-            echo '<p>Année(s) : ' . $annee . '</p>';
-        }
 
         if (!empty($categorie)) {
             echo '<p>Catégorie(s) : ' . get_the_term_list(get_the_ID(), 'categorie') . '</p>';
@@ -41,6 +36,16 @@ if (have_posts()) {
         if (!empty($format)) {
             echo '<p>Format(s) : ' . $format . '</p>';
         }
+
+        echo '<p>Type : ' . $type . '</p>';
+
+        if (!empty($annee)) {
+            echo '<p>Année : ' . $annee . '</p>';
+        }
+
+       
+
+        
 
         the_content();
 
