@@ -14,7 +14,11 @@ body{
 }
 
 .container {
-    display: flex;
+  display: flex;
   flex-direction: column;
   margin: 10px;
+}
+
+header {
+  z-index: 10;
 }

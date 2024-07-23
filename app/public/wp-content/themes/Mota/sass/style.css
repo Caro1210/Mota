@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header nav {
   width: 100%;
   display: flex;
@@ -44,9 +45,14 @@ a {
 }
 .nav_mobile {
   display: none;
-  background-color: #E00000;
+  background-color: rgba(224, 0, 0, 0.9);
   padding-top: 70%;
   padding-bottom: 70%;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .hamburger {
@@ -169,16 +175,6 @@ footer ul {
   src: url("../fonts/Poppins/Poppins-Regular.ttf");
   font-weight: normal;
 }
-@keyframes rotateIn {
-  from {
-    transform: rotate(-90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
 #overlay {
   display: none;
   position: fixed;
@@ -194,7 +190,7 @@ footer ul {
 
 #contact_modale {
   display: none;
-  animation: rotateIn 0.6s;
+  width: 700px;
 }
 #contact_modale img {
   width: 195%;
@@ -206,12 +202,12 @@ footer ul {
 
 .modale_content {
   border: 5px solid black;
-  max-width: 26%;
+  max-width: 300px;
   position: fixed;
   background-color: white;
   overflow: hidden;
-  padding-left: 7%;
-  margin-left: 35%;
+  padding-left: 1%;
+  margin-left: 40%;
   margin-top: 30px;
   text-align: left;
   z-index: 11;
@@ -245,7 +241,6 @@ footer ul {
   cursor: pointer;
 }
 .has-spinner:hover {
-  background-color: #B0B0B0;
   color: #fff;
 }
 
@@ -255,16 +250,22 @@ label {
   font-weight: 500;
 }
 
+.wpcf7-response-output {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
-  #contact_modale {
-    width: 90%;
-    margin: center;
-    left: 0;
-    right: 0;
-  }
   .modale_content {
-    max-width: 90%;
-    margin-left: 0;
+    border: 5px solid black;
+    max-width: 300px;
+    position: fixed;
+    background-color: white;
+    overflow: hidden;
+    padding-left: 1% !important;
+    margin-left: 0% !important;
+    margin-top: 30px;
+    text-align: left;
+    z-index: 11;
   }
 }
 .hero_header {
@@ -889,12 +890,12 @@ p {
 
 .modale_content2 {
   border: 5px solid black;
-  max-width: 26%;
+  max-width: 300px;
   position: fixed;
   background-color: white;
   overflow: hidden;
-  padding-left: 6%;
-  margin-left: 35%;
+  padding-left: 1%;
+  margin-left: 40%;
   margin-top: 30px;
   text-align: left;
   z-index: 11;
@@ -926,10 +927,6 @@ p {
     left: 0;
     right: 0;
   }
-  .modale_content {
-    max-width: 90%;
-    margin-left: 0;
-  }
   .modale_content2 {
     border: 5px solid black;
     max-width: 79%;
@@ -937,7 +934,6 @@ p {
     background-color: white;
     overflow: hidden;
     padding-left: 7%;
-    margin-left: 0%;
     margin-top: 30px;
     text-align: left;
     z-index: 11;
@@ -992,6 +988,50 @@ p {
     display: flex;
     gap: 50px;
     margin-top: 10px;
+  }
+}
+/* Adaptations pour les grands écrans */
+@media screen and (min-width: 1200px) {
+  .photo-info {
+    width: 40%;
+    margin-top: 200px;
+  }
+  h2 {
+    font-size: 80px;
+  }
+  .modal_button {
+    width: 300px;
+    font-size: 18px;
+  }
+  .vue_photo {
+    max-width: 700px;
+    max-height: 1000px;
+  }
+  .contact_inside {
+    gap: 2%;
+  }
+  .nav-links {
+    left: 200px;
+  }
+  .prev-post-preview, .next-post-preview {
+    right: 100px;
+  }
+  .single-photo .modale_content {
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .modale_content2 {
+    border: 5px solid black;
+    max-width: 300px;
+    position: fixed;
+    background-color: white;
+    overflow: hidden;
+    padding-left: 1%;
+    margin-left: 0% !important;
+    margin-top: 30px;
+    text-align: left;
+    z-index: 11;
   }
 }
 .lightbox {
@@ -1118,6 +1158,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 10px;
+}
+
+header {
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
